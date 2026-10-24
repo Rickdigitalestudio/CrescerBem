@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depoimentos - CrescerBem</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depoimentos - CrescerBem</title>
+    <!-- OG-ESTUDIO-RICK-DIGITAL -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Estúdio Rick Digital">
+    <meta property="og:title" content="Estúdio Rick Digital — Crescerbem">
+    <meta property="og:description" content="Plataforma CrescerBem: guias de alimentação, sono, rotina e atividades por fase, com consulta com especialistas e área de depoimentos. Criado pelo Estúdio Rick Digital.">
+    <meta property="og:url" content="https://rickdigitalestudio.github.io/CrescerBem/">
+    <meta property="og:image" content="https://rickdigitalestudio.github.io/CrescerBem/og-estudio-rick-digital.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Estúdio Rick Digital — Crescerbem">
+    <meta name="twitter:description" content="Plataforma CrescerBem: guias de alimentação, sono, rotina e atividades por fase, com consulta com especialistas e área de depoimentos. Criado pelo Estúdio Rick Digital.">
+    <meta name="twitter:image" content="https://rickdigitalestudio.github.io/CrescerBem/og-estudio-rick-digital.png">
+    <!-- OG-ESTUDIO-RICK-DIGITAL-END -->
+<meta name="description" content="CrescerBem - Guia completo para desenvolvimento infantil: alimentação, rotina, atividades e consulta com especialistas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
 <body>
+
+<div class="topbar">
+  <div class="container">
+    <span><i class="fa-solid fa-phone"></i>(11) 98942-6415 &nbsp; • &nbsp; <i class="fa-solid fa-envelope"></i>contato@crescerbem.com</span>
+    <span><i class="fa-solid fa-shield-heart"></i>Conteúdo revisado por especialistas</span>
+  </div>
+</div>
+
+
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="icone/baby-svgrepo-com.svg" alt="CrescerBem" loading="lazy" decoding="async">
+      <span><b>CrescerBem</b><small>Desenvolvimento infantil</small></span>
+    </a>
+    <div class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#servicos">Serviços</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="depoimentos.html">Depoimentos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost" style="padding:11px 20px"><i class="fa-regular fa-user"></i> Entrar</a>
+      <a href="consulta.html" class="btn btn-primary" style="padding:11px 20px">Agendar consulta</a>
+      <button class="burger" id="burger" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
       <header class="page-hero" style="background-image:url('imagens/bebe com familia.jpg')">
     <span class="blob b1" data-depth="1.4"></span>
     <span class="blob b2" data-depth="0.9"></span>
@@ -35,7 +83,7 @@
         <div class="galeria-fotos">
             <!-- Desenvolvimento -->
             <div class="foto-card" data-categoria="desenvolvimento">
-                <img src="imagens/bebe engatinhando.jpg" alt="Bebê aprendendo a engatinhar">
+                <img src="imagens/bebe engatinhando.jpg" alt="Bebê aprendendo a engatinhar" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Primeiro Engatinhar</h3>
                     <p>Lucas, 7 meses</p>
@@ -43,7 +91,7 @@
                 </div>
             </div>
             <div class="foto-card" data-categoria="desenvolvimento">
-                <img src="imagens/bebe falando.jpg" alt="Bebê falando primeiras palavras">
+                <img src="imagens/bebe falando.jpg" alt="Bebê falando primeiras palavras" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Primeiras Palavras</h3>
                     <p>Sofia, 11 meses</p>
@@ -52,7 +100,7 @@
 
             <!-- Alimentação -->
             <div class="foto-card" data-categoria="alimentacao">
-                <img src="imagens/bebe comendo.jpg" alt="Bebê comendo papinha">
+                <img src="imagens/bebe comendo.jpg" alt="Bebê comendo papinha" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Primeira Papinha</h3>
                     <p>Miguel, 6 meses</p>
@@ -60,7 +108,7 @@
                 </div>
             </div>
             <div class="foto-card" data-categoria="alimentacao">
-                <img src="imagens/alimentação saudavel.jpg" alt="Alimentação saudável">
+                <img src="imagens/alimentação saudavel.jpg" alt="Alimentação saudável" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Alimentação Saudável</h3>
                     <p>Família Oliveira</p>
@@ -69,7 +117,7 @@
 
             <!-- Atividades -->
             <div class="foto-card" data-categoria="atividades">
-                <img src="imagens/bebe brincando.jpg" alt="Bebê brincando">
+                <img src="imagens/bebe brincando.jpg" alt="Bebê brincando" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Brincadeiras Educativas</h3>
                     <p>Laura, 1 ano</p>
@@ -77,7 +125,7 @@
                 </div>
             </div>
             <div class="foto-card" data-categoria="atividades">
-                <img src="imagens/musica.jpg" alt="Atividade musical">
+                <img src="imagens/musica.jpg" alt="Atividade musical" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Música e Desenvolvimento</h3>
                     <p>Turma do Berçário</p>
@@ -86,7 +134,7 @@
 
             <!-- Consultas -->
             <div class="foto-card" data-categoria="consultas">
-                <img src="imagens/aconhamento medico.jpg" alt="Consulta pediátrica">
+                <img src="imagens/aconhamento medico.jpg" alt="Consulta pediátrica" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Acompanhamento Médico</h3>
                     <p>Pedro, 3 meses</p>
@@ -94,7 +142,7 @@
                 </div>
             </div>
             <div class="foto-card" data-categoria="consultas">
-                <img src="imagens/Telemedicina.jpg" alt="Consulta online">
+                <img src="imagens/Telemedicina.jpg" alt="Consulta online" loading="lazy" decoding="async">
                 <div class="foto-info">
                     <h3>Telemedicina</h3>
                     <p>Atendimento à distância</p>
@@ -105,7 +153,7 @@
         <section class="depoimentos">
             <!-- Depoimento Desenvolvimento -->
             <div class="depoimento-card" data-categoria="desenvolvimento">
-                <img src="imagens/cute-family-have-fun-kitchen.jpg" alt="Família Silva" class="depoimento-foto">
+                <img src="imagens/cute-family-have-fun-kitchen.jpg" alt="Família Silva" class="depoimento-foto" loading="lazy" decoding="async">
                 <div class="depoimento-conteudo">
                     <p class="depoimento-texto">"O acompanhamento do desenvolvimento do nosso filho com a equipe do CrescerBem foi fundamental. As orientações sobre estimulação precoce fizeram toda a diferença!"</p>
                     <p class="depoimento-autor">Família Silva</p>
@@ -118,7 +166,7 @@
 
             <!-- Depoimento Alimentação -->
             <div class="depoimento-card" data-categoria="alimentacao">
-                <img src="imagens/portrait-beautiful-family.jpg" alt="Família Oliveira" class="depoimento-foto">
+                <img src="imagens/portrait-beautiful-family.jpg" alt="Família Oliveira" class="depoimento-foto" loading="lazy" decoding="async">
                 <div class="depoimento-conteudo">
                     <p class="depoimento-texto">"As dicas de introdução alimentar foram essenciais! Nossa filha desenvolveu uma relação saudável com a comida desde cedo."</p>
                     <p class="depoimento-autor">Família Oliveira</p>
@@ -131,7 +179,7 @@
 
             <!-- Depoimento Atividades -->
             <div class="depoimento-card" data-categoria="atividades">
-                <img src="imagens/young-family-with.jpg" alt="Família Santos" class="depoimento-foto">
+                <img src="imagens/young-family-with.jpg" alt="Família Santos" class="depoimento-foto" loading="lazy" decoding="async">
                 <div class="depoimento-conteudo">
                     <p class="depoimento-texto">"As atividades sugeridas são criativas e fáceis de fazer em casa. Nosso filho se desenvolveu muito com as brincadeiras educativas!"</p>
                     <p class="depoimento-autor">Família Santos</p>
@@ -144,7 +192,7 @@
 
             <!-- Depoimento Consultas -->
             <div class="depoimento-card" data-categoria="consultas">
-                <img src="imagens/young-family.jpg" alt="Família Costa" class="depoimento-foto">
+                <img src="imagens/young-family.jpg" alt="Família Costa" class="depoimento-foto" loading="lazy" decoding="async">
                 <div class="depoimento-conteudo">
                     <p class="depoimento-texto">"O atendimento online é excelente! Conseguimos tirar todas as dúvidas com os especialistas sem sair de casa."</p>
                     <p class="depoimento-autor">Família Costa</p>
@@ -221,27 +269,29 @@
         });
     </script>
   <footer>
-    <div class="container foot">
-      <div>
-        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
-        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
-        <div class="social">
-          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        </div>
+  <div class="container foot">
+    <div>
+      <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt="" loading="lazy" decoding="async"><b>CrescerBem</b></div>
+      <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+      <div class="social">
+        <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       </div>
-      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
-      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
-      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
     </div>
-    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
-    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
-  </footer>
+    <div><h4>Links rápidos</h4><ul><li><a href="#home">Home</a></li><li><a href="#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+    <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+  </div>
+  <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+<p class="credito-estudio" style="text-align:center;font-size:.7rem;letter-spacing:.06em;opacity:.6;padding:16px;margin:0;line-height:1.6">
+      Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Estúdio Rick Digital</a>
+    </p>
+</footer>
 
-  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-</html> 
+</html>
