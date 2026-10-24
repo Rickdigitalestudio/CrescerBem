@@ -5,342 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Depoimentos - CrescerBem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Estilo para títulos principais */
-        .content-section h1,
-        .content-section h2,
-        section h2 {
-            text-align: center;
-            color: var(--heading-color);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .content-section h1::after,
-        .content-section h2::after,
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: var(--text-color);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .depoimentos-section {
-            padding: 120px 2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 100px;
-        }
-
-        .depoimento-card {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            display: flex;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .depoimento-foto {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-
-        .depoimento-conteudo {
-            flex: 1;
-        }
-
-        .depoimento-texto {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .depoimento-autor {
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .depoimento-data {
-            color: var(--gray-dark);
-            font-size: 0.9rem;
-        }
-
-        .galeria-fotos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .foto-card {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            aspect-ratio: 1;
-            cursor: pointer;
-        }
-
-        .foto-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .foto-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .foto-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .foto-card:hover .foto-info {
-            transform: translateY(0);
-        }
-
-        .compartilhar-section {
-            background: var(--gray-light);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .compartilhar-form {
-            max-width: 600px;
-            margin: 2rem auto;
-        }
-
-        .rating {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .rating i {
-            color: var(--primary-color);
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-
-        .filtros {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .filtro-btn {
-            background: var(--white);
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filtro-btn.active, .filtro-btn:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        @media screen and (max-width: 768px) {
-            .depoimento-card {
-                flex-direction: column;
-            }
-
-            .depoimento-foto {
-                width: 100%;
-                height: 200px;
-            }
-        }
-
-        .saiba-mais {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .saiba-mais:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .depoimento-card {
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-
-        .depoimento-card.hidden {
-            display: none;
-            opacity: 0;
-        }
-
-        .filtro-btn {
-            background: var(--white);
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .filtro-btn.active {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* Estilo do Menu Superior */
-        .menu-superior {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu-links {
-            display: flex;
-            gap: 2rem;
-            margin: 0 auto;
-            padding: 0;
-            list-style: none;
-        }
-
-        .menu-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .menu-links a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Botão Voltar 3D */
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(145deg, #FFE5F0, #FFD1E5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #E84393;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 
-                5px 5px 15px rgba(232, 67, 147, 0.2),
-                -5px -5px 15px rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            z-index: 1001;
-            border: none;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            transform: translateY(-5px) scale(1.1);
-            background: linear-gradient(145deg, #FFD1E5, #FFB7D4);
-            color: #D63384;
-            box-shadow: 
-                8px 8px 20px rgba(232, 67, 147, 0.3),
-                -8px -8px 20px rgba(255, 255, 255, 0.9);
-        }
-
-        .back-button:active {
-            transform: translateY(0) scale(1);
-            box-shadow: inset 2px 2px 5px rgba(232, 67, 147, 0.2);
-        }
-
-        .back-button i {
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover i {
-            transform: rotate(-360deg);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Menu Superior -->
-    <nav class="menu-superior">
-        <ul class="menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
-            <li><a href="alimentacao.html">Alimentação</a></li>
-            <li><a href="atividades.html">Atividades</a></li>
-            <li><a href="consulta.html">Consultas</a></li>
-            <li><a href="depoimentos.html">Depoimentos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+      <header class="page-hero" style="background-image:url('imagens/bebe com familia.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-star"></i> Depoimentos</span>
+      <h1>Depoimentos e Momentos Especiais</h1>
+      <p class="lead">Histórias reais de famílias que fazem parte da nossa comunidade</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Depoimentos</span></div>
+    </div>
+  </header>
 
-    <!-- Botão Voltar 3D -->
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i>
-    </a>
-
-    <main class="depoimentos-section">
-        <h1>Depoimentos e Momentos Especiais</h1>
-        <p class="subtitle">Histórias reais de famílias que fazem parte da nossa comunidade</p>
-
+<main class="depoimentos-section">
         <div class="filtros">
             <button class="filtro-btn active">Todos</button>
             <button class="filtro-btn">Desenvolvimento</button>
@@ -537,5 +220,28 @@
             e.target.reset();
         });
     </script>
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
 </html> 

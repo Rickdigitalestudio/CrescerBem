@@ -1,117 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentação Saudável - CrescerBem</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .content-section {
-            padding: 120px 2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .resource-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .resource-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .resource-link {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .resource-link:hover {
-            background: var(--secondary-color);
-        }
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(145deg, #E5FFE5, #D1FFD1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #2ECC71;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 
-                5px 5px 15px rgba(46, 204, 113, 0.2),
-                -5px -5px 15px rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            z-index: 1001;
-            border: none;
-            cursor: pointer;
-        }
-        .back-button:hover {
-            transform: translateY(-5px) rotate(-45deg);
-            background: linear-gradient(145deg, #D1FFD1, #B7FFB7);
-            color: #27AE60;
-            box-shadow: 
-                8px 8px 20px rgba(46, 204, 113, 0.3),
-                -8px -8px 20px rgba(255, 255, 255, 0.9);
-        }
-        .back-button:active {
-            transform: translateY(0) rotate(0deg);
-            box-shadow: inset 2px 2px 5px rgba(46, 204, 113, 0.2);
-        }
-        .back-button i {
-            transition: all 0.3s ease;
-        }
-        .back-button:hover i {
-            transform: scale(1.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alimentação Saudável - CrescerBem</title>
+  <meta name="description" content="CrescerBem - Guias e recursos confiáveis sobre alimentação infantil: introdução alimentar, nutrição por fase e boas práticas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Voltar
-    </a>
 
-    <main class="content-section">
-        <h1>Alimentação Saudável</h1>
-        <p>Descubra as melhores práticas e recursos para a alimentação do seu filho.</p>
+  <div class="topbar">
+    <div class="container">
+      <span><i class="fa-solid fa-phone"></i>(11) 98942-6415 &nbsp; • &nbsp; <i class="fa-solid fa-envelope"></i>contato@crescerbem.com</span>
+      <span><i class="fa-solid fa-shield-heart"></i>Conteúdo revisado por especialistas</span>
+    </div>
+  </div>
 
-        <div class="resource-card">
-            <h3>Sociedade Brasileira de Pediatria</h3>
-            <p>Guias oficiais e recomendações nutricionais para cada fase do desenvolvimento infantil.</p>
-            <a href="https://www.sbp.com.br/departamentos-cientificos/nutricao/" target="_blank" class="resource-link">Acessar Guias</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="icone/baby-svgrepo-com.svg" alt="CrescerBem">
+        <span><b>CrescerBem</b><small>Desenvolvimento infantil</small></span>
+      </a>
+      <div class="links" id="links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost" style="padding:11px 20px"><i class="fa-regular fa-user"></i> Entrar</a>
+        <a href="consulta.html" class="btn btn-primary" style="padding:11px 20px">Agendar consulta</a>
+        <button class="burger" id="burger" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero" style="background-image:url('imagens/bebe comendo.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-apple-whole"></i> Nutrição por fase</span>
+      <h1>Alimentação Saudável</h1>
+      <p class="lead">Descubra as melhores práticas e recursos para a alimentação do seu filho.</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><a href="index.html#servicos">Serviços</a><i class="fa-solid fa-chevron-right"></i><span>Alimentação Saudável</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="padding:56px 0 0">
+      <div class="container">
+        <div class="center reveal">
+          <span class="kicker">Curadoria CrescerBem</span>
+          <h2 class="title">Conteúdos e recursos selecionados</h2>
+          <p class="subtitle">Do primeiro papinho ao lanchinho da escola: guias oficiais e materiais confiáveis, selecionados pelos nossos especialistas.</p>
         </div>
-
-        <div class="resource-card">
-            <h3>Ministério da Saúde - Guia Alimentar</h3>
-            <p>Orientações oficiais do Ministério da Saúde sobre alimentação saudável para crianças.</p>
-            <a href="https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf" target="_blank" class="resource-link">Ver Guia Completo</a>
+        <div class="grid-services" data-stagger>
+        <article class="resource-card" style="--c:#FF6B6B">
+          <span class="icon" style="--bgc:#FFE9E9;--cc:#D64545"><i class="fa-solid fa-book-medical"></i></span>
+          <h3>Sociedade Brasileira de Pediatria</h3>
+          <p>Guias oficiais e recomendações nutricionais para cada fase do desenvolvimento infantil.</p>
+          <a href="https://www.sbp.com.br/departamentos-cientificos/nutricao/" target="_blank" rel="noopener" class="resource-link">Acessar Guias <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#2EC4B6">
+          <span class="icon" style="--bgc:#DFF7F4;--cc:#0E7A6E"><i class="fa-solid fa-utensils"></i></span>
+          <h3>Ministério da Saúde - Guia Alimentar</h3>
+          <p>Orientações oficiais do Ministério da Saúde sobre alimentação saudável para crianças.</p>
+          <a href="https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf" target="_blank" rel="noopener" class="resource-link">Ver Guia Completo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#EAB308">
+          <span class="icon" style="--bgc:#FFF4CC;--cc:#9A7400"><i class="fa-solid fa-globe"></i></span>
+          <h3>UNICEF Brasil - Alimentação</h3>
+          <p>Recursos e informações sobre alimentação saudável na primeira infância.</p>
+          <a href="https://www.unicef.org/brazil/alimentacao-na-primeira-infancia" target="_blank" rel="noopener" class="resource-link">Explorar Recursos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#FF8E3C">
+          <span class="icon" style="--bgc:#FFEEDD;--cc:#C25A10"><i class="fa-solid fa-microscope"></i></span>
+          <h3>Fiocruz - Alimentação Infantil</h3>
+          <p>Artigos e pesquisas sobre nutrição infantil e desenvolvimento saudável.</p>
+          <a href="https://portal.fiocruz.br/busca?search_api_views_fulltext=alimenta%C3%A7%C3%A3o%20infantil" target="_blank" rel="noopener" class="resource-link">Ver Artigos <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
         </div>
+      </div>
+    </section>
 
-        <div class="resource-card">
-            <h3>UNICEF Brasil - Alimentação</h3>
-            <p>Recursos e informações sobre alimentação saudável na primeira infância.</p>
-            <a href="https://www.unicef.org/brazil/alimentacao-na-primeira-infancia" target="_blank" class="resource-link">Explorar Recursos</a>
+    <section class="block">
+      <div class="container">
+        <div class="center reveal">
+          <span class="kicker">Momentos reais</span>
+          <h2 class="title">Famílias que vivem essa fase</h2>
+          <p class="subtitle">Fotos de verdade de bebês e famílias que fazem parte da comunidade CrescerBem.</p>
         </div>
-
-        <div class="resource-card">
-            <h3>Fiocruz - Alimentação Infantil</h3>
-            <p>Artigos e pesquisas sobre nutrição infantil e desenvolvimento saudável.</p>
-            <a href="https://portal.fiocruz.br/busca?search_api_views_fulltext=alimenta%C3%A7%C3%A3o%20infantil" target="_blank" class="resource-link">Ver Artigos</a>
+        <div class="galeria-fotos" data-stagger style="margin-top:34px">
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/bebe comendo.jpg" alt="Bebê comendo papinha">
+        </figure>
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/alimentação saudavel.jpg" alt="Refeição saudável da família">
+        </figure>
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/cute-asian-baby-dining-table-with-family.jpg" alt="Família na hora da refeição">
+        </figure>
         </div>
-    </main>
+        <div class="center reveal">
+          <a href="depoimentos.html" class="btn btn-ghost">Ver galeria completa <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="block" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="blob b1"></span>
+          <span class="blob b2"></span>
+          <div>
+            <h2>Precisa de orientação personalizada?</h2>
+            <p>Fale com nossos especialistas e receba um plano simples para a fase do seu filho.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="consulta.html" class="btn btn-light">Agendar consulta <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="contato.html" class="btn" style="border:2px solid rgba(255,255,255,.4);color:#fff">Falar conosco</a>
+            </div>
+          </div>
+          <div class="cta-box">
+            <div><i class="fa-solid fa-phone"></i> (11) 98942-6415</div>
+            <div><i class="fa-solid fa-envelope"></i> contato@crescerbem.com</div>
+            <div><i class="fa-solid fa-clock"></i> Seg a Sáb • 8h às 20h</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>

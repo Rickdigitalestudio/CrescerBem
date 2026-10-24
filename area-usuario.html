@@ -5,178 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área do Usuário - CrescerBem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .user-area {
-            padding: 120px 2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 2rem;
-        }
-
-        .sidebar {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            height: fit-content;
-        }
-
-        .user-info {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--gray-light);
-        }
-
-        .user-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            border: 3px solid var(--primary-color);
-            overflow: hidden;
-        }
-
-        .user-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .menu-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            color: var(--text-color);
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .menu-item i {
-            margin-right: 1rem;
-            width: 20px;
-            text-align: center;
-        }
-
-        .menu-item:hover,
-        .menu-item.active {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .content-area {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        .section-title {
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--gray-light);
-        }
-
-        .pedido-card {
-            border: 1px solid var(--gray-light);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .pedido-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--gray-light);
-        }
-
-        .pedido-produtos {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .produto-thumb {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .produto-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .depoimento-card {
-            background: var(--gray-light);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .favorito-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .favorito-card {
-            border: 1px solid var(--gray-light);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .favorito-img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .favorito-info {
-            padding: 1rem;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            .user-area {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Voltar
-    </a>
+      <header class="page-hero" style="background-image:url('imagens/bebe rindo.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-user-shield"></i> Área logada</span>
+      <h1>Minha Conta</h1>
+      <p class="lead">Gerencie seu perfil, seus depoimentos e os favoritos da sua família.</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Minha Conta</span></div>
+    </div>
+  </header>
 
-    <main class="user-area">
+<main class="user-area">
         <aside class="sidebar">
             <div class="user-info">
                 <div class="user-avatar">
@@ -333,5 +180,28 @@
             alert('Alterações salvas com sucesso!');
         });
     </script>
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
 </html> 

@@ -1,94 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades Educativas - CrescerBem</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .content-section {
-            padding: 120px 2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .resource-card {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .resource-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .resource-link {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .resource-link:hover {
-            background: var(--secondary-color);
-        }
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            z-index: 1001;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades Educativas - CrescerBem</title>
+  <meta name="description" content="CrescerBem - Brincadeiras e jogos educativos para estimular a criatividade e a coordenação do seu filho.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Voltar
-    </a>
 
-    <main class="content-section">
-        <h1>Atividades Educativas</h1>
-        <p>Descubra brincadeiras e jogos educativos para estimular o desenvolvimento do seu filho.</p>
+  <div class="topbar">
+    <div class="container">
+      <span><i class="fa-solid fa-phone"></i>(11) 98942-6415 &nbsp; • &nbsp; <i class="fa-solid fa-envelope"></i>contato@crescerbem.com</span>
+      <span><i class="fa-solid fa-shield-heart"></i>Conteúdo revisado por especialistas</span>
+    </div>
+  </div>
 
-        <div class="resource-card">
-            <h3>Nova Escola - Atividades</h3>
-            <p>Banco de atividades educativas para diferentes faixas etárias.</p>
-            <a href="https://novaescola.org.br/plano-de-aula" target="_blank" class="resource-link">Explorar Atividades</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="icone/baby-svgrepo-com.svg" alt="CrescerBem">
+        <span><b>CrescerBem</b><small>Desenvolvimento infantil</small></span>
+      </a>
+      <div class="links" id="links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="nav-cta">
+        <a href="login.html" class="btn btn-ghost" style="padding:11px 20px"><i class="fa-regular fa-user"></i> Entrar</a>
+        <a href="consulta.html" class="btn btn-primary" style="padding:11px 20px">Agendar consulta</a>
+        <button class="burger" id="burger" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero" style="background-image:url('imagens/bebe brincando.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-shapes"></i> Brincar e aprender</span>
+      <h1>Atividades Educativas</h1>
+      <p class="lead">Descubra brincadeiras e jogos educativos para estimular o desenvolvimento do seu filho.</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><a href="index.html#servicos">Serviços</a><i class="fa-solid fa-chevron-right"></i><span>Atividades Educativas</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="padding:56px 0 0">
+      <div class="container">
+        <div class="center reveal">
+          <span class="kicker">Curadoria CrescerBem</span>
+          <h2 class="title">Conteúdos e recursos selecionados</h2>
+          <p class="subtitle">Jogos, plataformas e ideias de brincadeiras para transformar a rotina em aprendizado de verdade.</p>
         </div>
-
-        <div class="resource-card">
-            <h3>SmartKids</h3>
-            <p>Portal com jogos educativos, atividades e passatempos para crianças.</p>
-            <a href="https://www.smartkids.com.br/" target="_blank" class="resource-link">Acessar Portal</a>
+        <div class="grid-services" data-stagger>
+        <article class="resource-card" style="--c:#FF6B6B">
+          <span class="icon" style="--bgc:#FFE9E9;--cc:#D64545"><i class="fa-solid fa-palette"></i></span>
+          <h3>Nova Escola - Atividades</h3>
+          <p>Banco de atividades educativas para diferentes faixas etárias.</p>
+          <a href="https://novaescola.org.br/plano-de-aula" target="_blank" rel="noopener" class="resource-link">Explorar Atividades <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#2EC4B6">
+          <span class="icon" style="--bgc:#DFF7F4;--cc:#0E7A6E"><i class="fa-solid fa-puzzle-piece"></i></span>
+          <h3>SmartKids</h3>
+          <p>Portal com jogos educativos, atividades e passatempos para crianças.</p>
+          <a href="https://www.smartkids.com.br/" target="_blank" rel="noopener" class="resource-link">Acessar Portal <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#EAB308">
+          <span class="icon" style="--bgc:#FFF4CC;--cc:#9A7400"><i class="fa-solid fa-gamepad"></i></span>
+          <h3>Escola Games</h3>
+          <p>Jogos educativos online gratuitos para crianças.</p>
+          <a href="http://www.escolagames.com.br/" target="_blank" rel="noopener" class="resource-link">Jogar Agora <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#FF8E3C">
+          <span class="icon" style="--bgc:#FFEEDD;--cc:#C25A10"><i class="fa-solid fa-people-roof"></i></span>
+          <h3>Tempojunto</h3>
+          <p>Blog com ideias de brincadeiras e atividades para fazer em família.</p>
+          <a href="https://tempojunto.com/" target="_blank" rel="noopener" class="resource-link">Ver Atividades <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="resource-card" style="--c:#6C5CE7">
+          <span class="icon" style="--bgc:#ECE8FF;--cc:#4A3FB5"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h3>Khan Academy Kids</h3>
+          <p>Plataforma gratuita de educação com atividades para crianças.</p>
+          <a href="https://learn.khanacademy.org/khan-academy-kids/" target="_blank" rel="noopener" class="resource-link">Começar a Aprender <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
         </div>
+      </div>
+    </section>
 
-        <div class="resource-card">
-            <h3>Escola Games</h3>
-            <p>Jogos educativos online gratuitos para crianças.</p>
-            <a href="http://www.escolagames.com.br/" target="_blank" class="resource-link">Jogar Agora</a>
+    <section class="block">
+      <div class="container">
+        <div class="center reveal">
+          <span class="kicker">Momentos reais</span>
+          <h2 class="title">Famílias que vivem essa fase</h2>
+          <p class="subtitle">Fotos de verdade de bebês e famílias que fazem parte da comunidade CrescerBem.</p>
         </div>
-
-        <div class="resource-card">
-            <h3>Tempojunto</h3>
-            <p>Blog com ideias de brincadeiras e atividades para fazer em família.</p>
-            <a href="https://tempojunto.com/" target="_blank" class="resource-link">Ver Atividades</a>
+        <div class="galeria-fotos" data-stagger style="margin-top:34px">
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/bebe brincando.jpg" alt="Bebê brincando">
+        </figure>
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/beincando.jpg" alt="Criança em brincadeira">
+        </figure>
+        <figure class="foto-card" style="aspect-ratio:4/3">
+          <img src="imagens/cute-baby-girl.jpg" alt="Bebê sorrindo">
+        </figure>
         </div>
-
-        <div class="resource-card">
-            <h3>Khan Academy Kids</h3>
-            <p>Plataforma gratuita de educação com atividades para crianças.</p>
-            <a href="https://learn.khanacademy.org/khan-academy-kids/" target="_blank" class="resource-link">Começar a Aprender</a>
+        <div class="center reveal">
+          <a href="depoimentos.html" class="btn btn-ghost">Ver galeria completa <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="block" style="padding-top:0">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="blob b1"></span>
+          <span class="blob b2"></span>
+          <div>
+            <h2>Precisa de orientação personalizada?</h2>
+            <p>Fale com nossos especialistas e receba um plano simples para a fase do seu filho.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a href="consulta.html" class="btn btn-light">Agendar consulta <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="contato.html" class="btn" style="border:2px solid rgba(255,255,255,.4);color:#fff">Falar conosco</a>
+            </div>
+          </div>
+          <div class="cta-box">
+            <div><i class="fa-solid fa-phone"></i> (11) 98942-6415</div>
+            <div><i class="fa-solid fa-envelope"></i> contato@crescerbem.com</div>
+            <div><i class="fa-solid fa-clock"></i> Seg a Sáb • 8h às 20h</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>

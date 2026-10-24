@@ -5,166 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - CrescerBem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .auth-container {
-            padding: 120px 2rem 2rem;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .auth-card {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .auth-tabs {
-            display: flex;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--gray-light);
-        }
-
-        .auth-tab {
-            flex: 1;
-            padding: 1rem;
-            text-align: center;
-            cursor: pointer;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-        }
-
-        .auth-tab.active {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            margin-bottom: -2px;
-        }
-
-        .auth-form {
-            display: none;
-        }
-
-        .auth-form.active {
-            display: block;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid var(--gray-light);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .submit-button {
-            width: 100%;
-            padding: 1rem;
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .submit-button:hover {
-            background: var(--secondary-color);
-        }
-
-        .social-login {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .social-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-button {
-            flex: 1;
-            padding: 0.8rem;
-            border: 1px solid var(--gray-light);
-            border-radius: 8px;
-            background: var(--white);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .social-button:hover {
-            background: var(--gray-light);
-        }
-
-        .social-button i {
-            margin-right: 0.5rem;
-        }
-
-        .forgot-password {
-            text-align: right;
-            margin-top: -1rem;
-            margin-bottom: 1rem;
-        }
-
-        .forgot-password a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
-        .divider {
-            text-align: center;
-            margin: 2rem 0;
-            position: relative;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 45%;
-            height: 1px;
-            background: var(--gray-light);
-        }
-
-        .divider::before {
-            left: 0;
-        }
-
-        .divider::after {
-            right: 0;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i> Voltar
-    </a>
+      <header class="page-hero" style="background-image:url('imagens/bebe rindo.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-user"></i> Área da família</span>
+      <h1>Entre na CrescerBem</h1>
+      <p class="lead">Acesse guias salvos, consultas e o acompanhamento do seu filho em um só lugar.</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Entrar</span></div>
+    </div>
+  </header>
 
-    <main class="auth-container">
+<main class="auth-container">
         <div class="auth-card">
             <div class="auth-tabs">
                 <div class="auth-tab active" data-tab="login">Login</div>
@@ -276,5 +135,28 @@
             tabs[0].click();
         });
     </script>
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
 </html> 

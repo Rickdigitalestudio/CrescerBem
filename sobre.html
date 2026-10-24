@@ -5,408 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - CrescerBem</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Estilo para títulos principais */
-        .content-section h1,
-        .content-section h2,
-        section h2 {
-            text-align: center;
-            color: var(--heading-color);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .content-section h1::after,
-        .content-section h2::after,
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: var(--text-color);
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .timeline-item {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid var(--gray-light);
-            position: relative;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .mission-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .mission-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid var(--gray-light);
-            transition: all 0.3s ease;
-        }
-
-        .mission-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary-color);
-        }
-
-        .mission-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .team-section {
-            text-align: center;
-            margin: 4rem 0;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            padding: 0 1rem;
-        }
-
-        .team-member {
-            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--primary-color);
-            transition: all 0.3s ease;
-            object-fit: cover;
-        }
-
-        .team-member:hover img {
-            transform: scale(1.05);
-            border-color: var(--secondary-color);
-        }
-
-        .team-member h3 {
-            color: var(--heading-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .team-member p {
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .member-description {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
-            margin-top: 1rem;
-        }
-
-        .stats-section {
-            background: var(--gray-light);
-            padding: 4rem 2rem;
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .values-section {
-            padding: 4rem 2rem;
-        }
-
-        .value-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .value-card:hover .value-icon {
-            transform: scale(1.1);
-        }
-
-        /* Card de Cuidado */
-        .mission-card:nth-child(1) {
-            background: linear-gradient(135deg, #FFE5E5 0%, #FFD1D1 100%);
-            border-color: #FFB7B7;
-        }
-
-        .mission-card:nth-child(1) i {
-            color: #FF6B6B;
-        }
-
-        .mission-card:nth-child(1):hover {
-            transform: translateY(-5px);
-            background: linear-gradient(135deg, #FFD1D1 0%, #FFB7B7 100%);
-        }
-
-        /* Card de Desenvolvimento */
-        .mission-card:nth-child(2) {
-            background: linear-gradient(135deg, #E5F9FF 0%, #D1F3FF 100%);
-            border-color: #B7E9FF;
-        }
-
-        .mission-card:nth-child(2) i {
-            color: #4ECDC4;
-        }
-
-        .mission-card:nth-child(2):hover {
-            transform: translateY(-5px);
-            background: linear-gradient(135deg, #D1F3FF 0%, #B7E9FF 100%);
-        }
-
-        /* Card de Suporte */
-        .mission-card:nth-child(3) {
-            background: linear-gradient(135deg, #E5FFE5 0%, #D1FFD1 100%);
-            border-color: #B7FFB7;
-        }
-
-        .mission-card:nth-child(3) i {
-            color: #2ECC71;
-        }
-
-        .mission-card:nth-child(3):hover {
-            transform: translateY(-5px);
-            background: linear-gradient(135deg, #D1FFD1 0%, #B7FFB7 100%);
-        }
-
-        /* Card de Confiabilidade */
-        .value-card:nth-child(1) {
-            background: linear-gradient(135deg, #E5F0FF 0%, #D1E5FF 100%);
-            border-color: #B7D4FF;
-        }
-
-        .value-card:nth-child(1) .value-icon {
-            color: #3498DB;
-        }
-
-        /* Card de Empatia */
-        .value-card:nth-child(2) {
-            background: linear-gradient(135deg, #FFE5F0 0%, #FFD1E5 100%);
-            border-color: #FFB7D4;
-        }
-
-        .value-card:nth-child(2) .value-icon {
-            color: #E84393;
-        }
-
-        /* Card de Comunidade */
-        .value-card:nth-child(3) {
-            background: linear-gradient(135deg, #F0E5FF 0%, #E5D1FF 100%);
-            border-color: #D4B7FF;
-        }
-
-        .value-card:nth-child(3) .value-icon {
-            color: #9B59B6;
-        }
-
-        /* Estilo do Menu Superior */
-        .menu-superior {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 1rem 2rem;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu-links {
-            display: flex;
-            gap: 2rem;
-            margin: 0 auto;
-            padding: 0;
-            list-style: none;
-        }
-
-        .menu-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .menu-links a:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Botão Voltar 3D */
-        .back-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(145deg, #E5F0FF, #D1E5FF);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #3498DB;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 
-                5px 5px 15px rgba(52, 152, 219, 0.2),
-                -5px -5px 15px rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            z-index: 1001;
-            border: none;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            transform: translateY(-5px) translateX(-5px);
-            background: linear-gradient(145deg, #D1E5FF, #B7D4FF);
-            color: #2980B9;
-            box-shadow: 
-                8px 8px 20px rgba(52, 152, 219, 0.3),
-                -8px -8px 20px rgba(255, 255, 255, 0.9);
-        }
-
-        .back-button:active {
-            transform: translateY(0) translateX(0);
-            box-shadow: inset 2px 2px 5px rgba(52, 152, 219, 0.2);
-        }
-
-        .back-button i {
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover i {
-            transform: scale(0.8) translateX(-5px);
-        }
-
-        /* Ajuste do padding do conteúdo principal */
-        main {
-            padding-top: 80px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Menu Superior -->
-    <nav class="menu-superior">
-        <ul class="menu-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
-            <li><a href="alimentacao.html">Alimentação</a></li>
-            <li><a href="atividades.html">Atividades</a></li>
-            <li><a href="consulta.html">Consultas</a></li>
-            <li><a href="depoimentos.html">Depoimentos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+      <header class="page-hero" style="background-image:url('imagens/bebe com familia.jpg')">
+    <span class="blob b1" data-depth="1.4"></span>
+    <span class="blob b2" data-depth="0.9"></span>
+    <span class="blob b3" data-depth="1.7"></span>
+    <div class="container">
+      <span class="eyebrow"><i class="fa-solid fa-heart"></i> Sobre o CrescerBem</span>
+      <h1>Nossa História</h1>
+      <p class="lead">Conheça o CrescerBem e nossa missão de apoiar pais e bebês</p>
+      <div class="crumbs"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i><span>Sobre</span></div>
+    </div>
+  </header>
 
-    <!-- Botão Voltar 3D -->
-    <a href="index.html" class="back-button">
-        <i class="fas fa-arrow-left"></i>
-    </a>
-
-    <main class="content-section">
-        <h1>Nossa História</h1>
-        <p class="subtitle">Conheça o CrescerBem e nossa missão de apoiar pais e bebês</p>
-
+<main class="content-section">
         <div class="timeline">
             <div class="timeline-item">
                 <h3>Nossa Inspiração</h3>
@@ -448,15 +65,15 @@
             <h2>Nosso Impacto</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">5000+</div>
+                    <div class="stat-number" data-count="5000" data-suffix="+">5000+</div>
                     <p>Famílias Apoiadas</p>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">100+</div>
+                    <div class="stat-number" data-count="100" data-suffix="+">100+</div>
                     <p>Especialistas Parceiros</p>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">1000+</div>
+                    <div class="stat-number" data-count="1000" data-suffix="+">1000+</div>
                     <p>Artigos e Recursos</p>
                 </div>
                 <div class="stat-item">
@@ -543,6 +160,28 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <div class="container foot">
+      <div>
+        <div class="foot-brand"><img src="icone/baby-svgrepo-com.svg" alt=""><b>CrescerBem</b></div>
+        <p>Ajudando pais a criar filhos felizes e saudáveis, com ciência e afeto em cada fase.</p>
+        <div class="social">
+          <a href="https://facebook.com/crescerbembrasil" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/crescerbem.oficial" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@crescerbembrasil" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://tiktok.com/@crescerbem.oficial" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div><h4>Links rápidos</h4><ul><li><a href="index.html#home">Home</a></li><li><a href="index.html#servicos">Serviços</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="depoimentos.html">Depoimentos</a></li></ul></div>
+      <div><h4>Serviços</h4><ul><li><a href="alimentacao.html">Alimentação</a></li><li><a href="desenvolvimento.html">Desenvolvimento</a></li><li><a href="atividades.html">Atividades</a></li><li><a href="consulta.html">Consultas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li>Email: contato@crescerbem.com</li><li>Tel: (11) 98942-6415</li><li>Seg a Sáb • 8h às 20h</li></ul></div>
+    </div>
+    <div class="container bottom"><span>© 2024 CrescerBem. Todos os direitos reservados.</span><span>Feito com carinho para famílias</span></div>
+    <p class="credito-estudio">Site criado por <a href="https://rickdigitalestudio.github.io/profissional-rickdutra/" target="_blank" rel="noopener">Estúdio Rick Digital</a></p>
+  </footer>
+
+  <a class="wpp" href="https://wa.me/5511989426415?text=Ol%C3%A1!%20Vim%20pelo%20site%20CrescerBem" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
 </body>
 </html> 
